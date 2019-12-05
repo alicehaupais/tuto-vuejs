@@ -5,6 +5,7 @@
         <span> Hello {{ message }} </span>
         <p> Message : {{msg}} </p>
         <p> Message computed : {{onlyFirstWord}} </p>
+        <h1> Hello {{person.firstName}} {{person.lastName}} from {{from}} </h1>
     </div>
 </template>
 
@@ -13,7 +14,12 @@
      data() {
        return {
           message: "World",
-          msg : "hello World"
+          msg : "hello World",
+          person : {
+            firstName : "Jean",
+            lastName : "Dupont"
+          },
+          from : "New York"
        }
     },
     computed : {
