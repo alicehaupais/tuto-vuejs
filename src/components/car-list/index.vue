@@ -1,10 +1,11 @@
 <template>
-    <div>
+    <div class = 'car-list'>
         <h1> Liste de voitures </h1>
         <ul v-for = 'car in cars' :key =car.name>
             <li> {{car.name}} </li>
             <li> {{car.model}} </li>
             <li> {{car.year}} </li>
+            <button @click="selectCar(car)"> Voir détails </button>
         </ul>
         <button @click="addCar" > Add Car </button>
         <p> Nombre de voitures : {{counter}} </p>
@@ -19,7 +20,7 @@
 
 export default {
     
-    name : 'car',
+    name : 'car-list',
     data ()  {
         return {
             cars : [],
@@ -36,6 +37,9 @@ export default {
                 'model' : 'Fiesta',
                  'year' : '2008'
             })
+        },
+        selectCar(car){
+            this.$emit('selected', car)
         }
     },
     computed : {
