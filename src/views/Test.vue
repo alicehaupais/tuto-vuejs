@@ -1,6 +1,6 @@
 <template>
   <div class="test">
-      <Car> </Car>
+      <Car name = 'Ford' model = 'Fiesta' year = '2008'/>
   
   </div>
 </template>

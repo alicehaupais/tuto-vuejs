@@ -12,19 +12,29 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+    import VueResource from 'vue-resource'
+
+    Vue.use(VueResource)
+
 export default {
+    
     name : 'car',
     data ()  {
         return {
             cars : [],
         }
     },
+    http : {
+        root : "http://localhost:3000"
+    },
+    props : ['name', 'model', 'year'],
     methods : {
         addCar (){
-            this.cars.push({
-                'name' : 'ford',
-                'model' : 'fiesta',
-                'year' : '2008'
+            this.cars.push ({
+                'name' : 'Ford',
+                'model' : 'Fiesta',
+                 'year' : '2008'
             })
         }
     },
@@ -33,8 +43,17 @@ export default {
             return this.cars.length
         }
     },
-    mounted : {
-
+    mounted () {
+        // this.cars.push ({
+        //     'name' : this.name,
+        //     'model' : this.model,
+        //     'year' : this.year
+        // })
+        this.$resource('cars')
+        .get()
+        .then ( response => { this.cars = response.data}, 
+                // response => { console.log('erreur', response)}
+        )
     }
 }
 </script>
