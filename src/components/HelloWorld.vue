@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <Hello firstName = 'John' lastName = 'Dupont' from = 'New York' />
     <h1> Test </h1>
-    <Car> </Car>
+    <car> </car>
     <h1> Test </h1>
     <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -36,7 +36,7 @@
 
 <script>
 import Hello from '@/components/Hello.vue'
-import Car from '@/components/Car.vue'
+import car from '@/components/Car.vue'
 
 export default {
   name: 'HelloWorld',
@@ -45,7 +45,7 @@ export default {
   },
   components : {
     Hello,
-    Car
+    car
   }
 }
 </script>
