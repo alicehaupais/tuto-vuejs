@@ -1,7 +1,7 @@
 <template>
   <div class="page">
       <CarList v-on:selected  = 'setSelected($event)'/>
-      <CarDetails :car = 'selectedCar'/>
+      <CarDetails/>
   
   </div>
 </template>

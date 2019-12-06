@@ -13,10 +13,11 @@
 </template>
 
 <script>
-    import Vue from 'vue'
-    import VueResource from 'vue-resource'
+import Vue from 'vue'
+import VueResource from 'vue-resource'
+import bus from '../../main.js'
 
-    Vue.use(VueResource)
+Vue.use(VueResource)
 
 export default {
     
@@ -39,7 +40,7 @@ export default {
             })
         },
         selectCar(car){
-            this.$emit('selected', car)
+            bus.$emit('selected', car.id)
         }
     },
     computed : {
