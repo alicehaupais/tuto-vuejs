@@ -13,6 +13,7 @@
 
 <script>
 export default {
+    name : 'car',
     data ()  {
         return {
             cars : [],
