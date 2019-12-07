@@ -20,7 +20,7 @@ export default {
     name: 'car-details',
     data () {
         return {
-          car : {}
+          car : {},
         }
      },
     http : {

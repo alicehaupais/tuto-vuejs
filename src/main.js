@@ -5,7 +5,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-window.bus = new Vue()
+export default 
+  window.bus = new Vue()
 
 new Vue({
   router,

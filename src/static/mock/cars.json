@@ -16,12 +16,12 @@
     "details" : [
         {
             "id" : "1",
-            "immatriculation " : "ABCD",
+            "immatriculation" : "ABCD",
             "km" : "6000"
         },
         {
             "id" : "2",
-            "immatriculation " : "EFGH",
+            "immatriculation" : "EFGH",
             "km" : "90000"
         }
     ]
