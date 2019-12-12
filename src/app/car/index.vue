@@ -8,8 +8,8 @@
 
 <script>
 // @ is an alias to /src
-import CarList from '@/components/car-list/index.vue'
-import CarDetails from '@/components/car-details/index.vue'
+import CarList from './car-list'
+import CarDetails from './car-details'
 
 export default {
   name: 'carPage',

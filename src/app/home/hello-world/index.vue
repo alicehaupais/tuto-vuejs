@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import Hello from '@/components/hello/index.vue'
+import Hello from './hello'
 
 export default {
   name: 'hello-world',
