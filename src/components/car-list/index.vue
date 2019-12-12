@@ -13,11 +13,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import VueResource from 'vue-resource'
-import bus from '../../main.js'
-
-Vue.use(VueResource)
+//import bus from '../../main.js'
 
 export default {
     
@@ -39,8 +35,9 @@ export default {
                  'year' : '2008'
             })
         },
-        selectCar(car){
-            bus.$emit('selected', car.id)
+       selectCar(car){
+            this.$store.dispatch('selectCarRequest', car.id)
+            //bus.$emit('selected', car.id)
         }
     },
     computed : {
